@@ -1,6 +1,6 @@
-# Karem Motors — Parts Catalog
+# Kareem Tractor Parts — Parts Catalog
 
-A static website that lists the tractor spare parts available at Karem Motors
+A static website that lists the tractor spare parts available at Kareem Tractor Parts
 (214 parts, taken from the Ceylan order PRC-20071).
 
 No build step. Plain HTML, CSS and JavaScript.

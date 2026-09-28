@@ -5,8 +5,8 @@
   --muted: #6b6f76;
   --line: #e2dfd8;
   --dark: #1b1e22;
-  --accent: #d71f26;
-  --accent-dark: #a8151b;
+  --accent: #c60f11;
+  --accent-dark: #960b0d;
   --accent-soft: #fde8e8;
   --accent-ink: #ffffff;
   --green: #2f7d4f;
@@ -30,23 +30,15 @@ button, input, select { font: inherit; color: inherit; }
 .wrap { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 16px; }
 
 /* Header */
-.site-header { background: var(--accent); color: #fff; }
-.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+.site-header { background: #fff; border-bottom: 4px solid var(--accent); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 88px; }
 .brand { display: flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; }
-.brand-mark {
-  display: grid; place-items: center; width: 40px; height: 40px;
-  background: #fff; color: var(--accent);
-  font: 700 20px/1 var(--display); border-radius: 8px;
-}
-.brand-logo { height: 44px; width: auto; max-width: 180px; object-fit: contain; }
-.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
-.brand-text strong { font: 700 22px/1 var(--display); letter-spacing: .5px; text-transform: uppercase; }
-.brand-text small { color: #ffd6d6; font-size: 12px; }
-.header-count { margin: 0; color: #ffe1e1; font-size: 14px; }
-.header-count span { color: #fff; font-weight: 600; }
+.brand-logo { height: 72px; width: auto; }
+.header-count { margin: 0; color: var(--muted); font-size: 14px; }
+.header-count span { color: var(--accent); font-weight: 700; }
 
 /* Hero */
-.hero { background: var(--dark); color: #fff; padding: 28px 0 40px; border-top: 4px solid var(--accent-dark); }
+.hero { background: var(--dark); color: #fff; padding: 28px 0 40px; }
 .hero h1 { font: 700 clamp(32px, 6vw, 48px)/1.05 var(--display); margin: 0 0 6px; text-transform: uppercase; }
 .hero p { margin: 0 0 20px; color: #b5b9bf; }
 .search { position: relative; max-width: 620px; }
@@ -127,7 +119,8 @@ button, input, select { font: inherit; color: inherit; }
 
 @media (max-width: 600px) {
   .header-count { display: none; }
-  .brand-logo { height: 38px; max-width: 120px; }
+  .header-inner { height: 72px; }
+  .brand-logo { height: 58px; }
   .grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .thumb { height: 120px; }
   .thumb img { width: 90px; height: 90px; }
