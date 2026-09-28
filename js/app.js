@@ -136,6 +136,5 @@ dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(
 
 // Init
 $('#total-count').textContent = products.length;
-$('#year').textContent = new Date().getFullYear();
 renderCategories();
 render();
