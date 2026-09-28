@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karem Motors — Tractor Parts</title>
+  <meta name="description" content="Browse tractor spare parts available at Karem Motors: engine, gaskets, seals, electrical, brakes, steering and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./">
+        <!-- Put your logo at assets/logo.png; the "KM" badge shows until it exists -->
+        <img class="brand-logo" src="assets/logo.png" alt="" hidden
+             onload="this.hidden = false; this.nextElementSibling.hidden = true"
+             onerror="this.remove()">
+        <span class="brand-mark" aria-hidden="true">KM</span>
+        <span class="brand-text">
+          <strong>Karem Motors</strong>
+          <small>Tractor spare parts</small>
+        </span>
+      </a>
+      <p class="header-count"><span id="total-count">0</span> parts in store</p>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Find the part you need</h1>
+      <p>Search by part name, part number or tractor model.</p>
+      <div class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="search" type="search" placeholder="e.g. oil seal, 2418F475, 165…" autocomplete="off" aria-label="Search parts">
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <nav class="chips" id="categories" aria-label="Categories"></nav>
+
+    <div class="toolbar">
+      <p id="result-count" aria-live="polite"></p>
+      <label class="sort">
+        Sort
+        <select id="sort">
+          <option value="item">Default</option>
+          <option value="name">Name A–Z</option>
+          <option value="price-asc">Price: low to high</option>
+          <option value="price-desc">Price: high to low</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>No parts match your search.</p>
+  </main>
+
+  <dialog id="detail" class="detail">
+    <button class="close" id="detail-close" aria-label="Close">&times;</button>
+    <div id="detail-body"></div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap">© <span id="year"></span> Karem Motors</div>
+  </footer>
+
+  <script src="data/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
